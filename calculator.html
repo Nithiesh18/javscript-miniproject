@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <input type="number" id="input1">
+    <select name="" id="operations">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="input2">
+    <input type="button" value="=" onclick="answer()">
+    <div id="result"></div>
+</body>
+<script>
+ 
+    
+    
+    function answer(){
+        let input1=document.getElementById("input1").value;
+        let input2=document.getElementById("input2").value;
+        let operator=document.getElementById("operations").value;
+        let result=document.getElementById("result");
+
+        if(operator=="+") {
+            result1= Number(input1)+ Number(input2);
+        }
+        else if(operator=="-"){
+            result1= Number(input1)- Number(input2);
+        }
+        else if(operator=="*"){
+            result1= Number(input1)* Number(input2);
+        }
+        else if(operator=="/"){
+            result1= Number(input1)/ Number(input2);
+        }
+
+        
+        //result1= Number(input1)+ Number(input2);
+        result.innerHTML=`Result : ${result1}`;
+
+    }
+</script>
+</html>

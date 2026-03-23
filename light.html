@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>light</title>
+    <style>
+        body{
+            align-items: center;
+            display: flex;
+            /* background-color: grey; */
+        }
+        div{
+            align-items: center;
+            display: inline-block;
+            margin: 100px;
+            margin-left: 100px;
+        }
+        input{
+            margin: 150px;
+            margin-left: 190px;
+            padding: 18px;
+            border-radius: 10px;
+            background-color: chartreuse;
+        }
+
+
+    </style>
+</head>
+<body id="background">
+
+    <input type="button" value="ON" onclick="lightON()">
+    <div id="light"><img src="bulbOff.png" alt=""></div>
+   <input type="button" value="OFF" onclick="lightOFF()">
+
+</body>
+<script>
+
+    let light =document.getElementById("light");
+    let bg=document.getElementById("background")
+
+    function lightON(){
+        light.innerHTML=`<img src="bulbOn.png" alt="">`
+        //bg.style="background-color:white"
+
+    }
+    function lightOFF() {
+        light.innerHTML=`<img src="bulbOff.png" alt="">`
+        // bg.style="background-color:grey"
+    }
+    
+    
+
+
+
+
+
+
+</script>
+
+</html>
